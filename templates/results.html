@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Results{% endblock  %}
+
+{% block body %}
+
+
+
+<center>
+    
+        <form  method="post" action="/search" border="1">
+            {% csrf_token %}
+            <table border="1">
+                <tr>
+                    <td>
+            <label for="">Roll Number</label>
+        </td>
+        <td>
+            <input name="rnum" id="id_q" type="text" class="form-control" placeholder="Roll Number" />
+        </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="">Name</label>
+        </td>
+        <td>
+            <input type="text" name="nme" class="form-control" placeholder="Name" >
+        </td>
+        </tr>
+        <tr>
+            <td>
+            <label for="">Date of Birth</label>
+        </td>
+        <td>
+            <input type="date" name="dob" id="" class="form-control" placeholder="Date Of Birth" >
+        </td>
+        </tr>
+            
+        </table>
+        <button type="submit">Search</button>
+        </form>
+    
+</center>
+  
+{% endblock  %}

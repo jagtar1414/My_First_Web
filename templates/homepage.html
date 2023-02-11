@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Homepage{% endblock  %}
+{% block body %}
+
+
+
+
+    {% if request.user.is_authenticated %}
+    <h1>
+        <p></p>
+    </h1>   
+    <button type="submit" onclick="location.href='/logout'">Logout</button>
+    
+    <h2>
+        <a href="results">Check Your Results</a>
+    </h2>
+    
+     
+    {% else %}
+    <button type="submit" onclick="location.href='/login'">Login</button>
+    <br>
+    <br>
+    <button type="submit" onclick="location.href='/signup'">Signup</button>
+    
+    {% endif %}
+
+    
+
+
+  
+{% endblock  %}

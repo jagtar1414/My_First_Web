@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+
+{% for st in found_rst %}
+<center>
+    <h1>Here Is Your Result  {{st.nme}}</h1>
+<table border="1" style="width: 200px; height: 200px;">
+    <tr>
+        <td>Student Roll Number</td>
+        <td >{{st.rnum}}</td>
+    </tr>
+    <tr>
+        <td>Student Name</td>
+        <td>{{st.nme}}</td>
+    </tr>
+    <tr>
+        <td>Result</td>
+        <td>{{st.rslt}}</td>
+    </tr>
+</table>
+</center>
+{% endfor %} 
+
+
+
+
+{% endblock body %}
